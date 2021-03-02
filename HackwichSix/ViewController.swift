@@ -10,19 +10,19 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var myFriendsArray = ["Sara", "Nicole", "Grant"]
+    var placesToVisit = ["Maui", "Colorado", "Japan", "Okinawa"]
     
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return myFriendsArray.count
+        return placesToVisit.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
-        let text = myFriendsArray[indexPath.row]
+        let text = placesToVisit[indexPath.row]
         cell.textLabel?.text = text
         return cell
     }
