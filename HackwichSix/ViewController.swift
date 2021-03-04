@@ -10,20 +10,23 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var placesToVisit = ["Maui", "Colorado", "Japan", "Okinawa"]
-    
-    
+    //var placesToVisit = ["Maui", "Colorado", "Japan", "Okinawa"]
+    var friendsHomeArray = ["Kanani", "Tiana", "Jeremy"]
+    var subtleNameArrary = ["Honolulu", "Palehua", "Ithaca"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return placesToVisit.count
+        //return placesToVisit.count
+        return friendsHomeArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
-        let text = placesToVisit[indexPath.row]
+        //let text = placesToVisit[indexPath.row]
+        let text = friendsHomeArray[indexPath.row]
         cell.textLabel?.text = text
+        cell.detailTextLabel?.text = subtleNameArrary[indexPath.row]
         return cell
     }
     
